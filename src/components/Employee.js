@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Employee = () => {
+const Employee = ({employees}) => {
     return (
         <h1>Employee Goes Here</h1>
     )
