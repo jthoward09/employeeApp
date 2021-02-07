@@ -1,14 +1,15 @@
 import React from 'react';
 
 const EmployeeCard = ({employee}) => {
-    console.log(employee);
     return (
-        <div>
-            <img src={employee.picture.medium} alt={`${employee.name.first} profile picture`}/>
-            <h2>{employee.name.first} {employee.name.last}</h2>
-            <h3>{employee.email} • {employee.cell}</h3>
-            <h4>{employee.gender}</h4>
-        </div>
+        <tr>
+            <td><img src={employee.picture.medium} alt={`${employee.name.first} profile picture`}/></td>
+            <td>{employee.name.first}</td>
+            <td>{employee.name.last}</td>
+            <td>{employee.email}</td>
+            <td>{employee.cell}</td>
+            <td>{employee.gender}</td>
+        </tr>
     )
 }
 
