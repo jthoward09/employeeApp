@@ -35,12 +35,25 @@ function App() {
     setEmployees(sortedEmployees);
   }
 
+  const filterFemales = (employee) => {
+    let femaleEmployees = [...employee]
+    
+    const filteredFemales = femaleEmployees.filter(employ => employ.gender === 'female');
+
+    setEmployees(filteredFemales);
+  }
+
   return (
     <div className="App">
       <h1>Employee Directory</h1>
+      <div>
       <button onClick={() => {
         sortByLastName(employees)    
       }}>Sort By Last Name</button>
+      <button onClick={() => {
+        filterFemales(employees);
+      }}>Filter Female</button>
+      </div>
       <Employee employees={employees}/>
     </div>
   );
